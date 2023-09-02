@@ -3,10 +3,9 @@
 # with the first letter capitalized.
 
 
-prompt = input("What is your name? ")
-
-while True:
-    print(prompt.capitalize())
+# prompt = input("What is your name? ")
+# while True:
+#     print(prompt.capitalize())
 
 
 
@@ -14,4 +13,7 @@ while True:
 # repeatedly. Then, the program repeatedly prints out the name
 # with the first letter capitalized.
 
+while True:
+    name = input("What is your name? ")
+    print(name.capitalize())
 
