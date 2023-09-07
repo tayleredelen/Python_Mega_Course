@@ -20,8 +20,9 @@ while True:
             # for item in todos:
             #     new_item = item.strip('\n')
             #     new_todos.append(new_item)
+            # ^same as below list comprehension
             new_todos = [item.strip('\n') for item in todos]
-            # ^list comprehension
+            # ^list comprehension removes break line
             for index, item in enumerate(new_todos):
                 row = f"{index + 1}-{item}"
                 print(row)
