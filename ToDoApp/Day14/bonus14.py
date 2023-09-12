@@ -1,5 +1,5 @@
-from ToDoApp.Day14.converters14 import convert
-from ToDoApp.Day14.parsers14 import parse
+from ToDoApp.Day14.converters import convert
+from ToDoApp.Day14.parsers import parse
 
 feet_inches = input("Enter feet an inches: ")
 
