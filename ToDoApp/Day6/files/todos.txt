@@ -1,5 +1,0 @@
-clean
-print
-clean
-two
-three
