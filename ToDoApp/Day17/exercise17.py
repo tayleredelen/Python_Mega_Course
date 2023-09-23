@@ -1,29 +1,43 @@
-import PySimpleGUI as sg
+# Create a program that converts feet and inches to meters.
 
-label1 = sg.Text("Enter feet:")
-input1 = sg.Input()
+# Solution:
+# import PySimpleGUI as sg
+#
+# layout = [
+#     [sg.Text("Enter feet:"), sg.InputText(key='feet')],
+#     [sg.Text("Enter inches:"), sg.InputText(key='inches')],
+#     [sg.Button("Convert"), sg.Text("", size=(20, 1), key='result')],
+# ]
+#
+# window = sg.Window("Converter", layout)
+#
+# def conversion(feet, inches):
+#     feet = float(feet)
+#     inches = float(inches)
+#     total_inches = (feet * 12) + inches
+#     meters = total_inches * 0.0254
+#     return meters
+#
+# while True:
+#     event, values = window.read()
+#
+#     if event == sg.WIN_CLOSED:
+#         break
+#     elif event == 'Convert':
+#         feet = values['feet']
+#         inches = values['inches']
+#         result_meters = conversion(feet, inches)
+#         window['result'].update(f'{result_meters:.2f} meters')
+#
+# window.close()
 
-label2 = sg.Text("Enter inches:")
-input2 = sg.Input()
 
-# How to convert feet & inces to meters:
-# The input is 5′7″.
-# Convert the feet to inches: 5 feet = 5* 12 = 60 inches.
-# Add the 7 inches, for a total of 67 inches.
-# Multiply by 25.4, thus: 67 * 25,4 = 1 701.8 mm, exactly.
+# Define a function that converts fluid ounces to milliliters knowing that 1 fluid ounce
+# is equal to 29.57353 milliliters. For example, I was to call your function with foo(1)
+# I would get an output of 29.57353. If I called it with  foo(5) I would get 147.86765, and so on.
 
-def conversion(feet, inches):
-    feet_conv = feet * 12
-    inch_conv = inches
-    feet_inch = feet_conv + inch_conv
-    meters = feet_inch * 25.4
-    return meters
-
-
-convert_button = sg.Button("Convert")
-result = sg.Text(conversion(feet=label1, inches=label2))
-window = sg.Window("Convertor", layout=[[label1, input1],
-                                              [label2, input2],
-                                                [convert_button, result]])
-window.read()
-window.close()
+# Solution:
+# def foo(ounces):
+#     oz_conv = float(ounces)
+#     ml_conv = oz_conv * 29.57353
+#     return ml_conv
