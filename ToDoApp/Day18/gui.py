@@ -8,11 +8,13 @@ sg.theme("HotDogStand")
 clock = sg.Text('', key='clock')
 label = sg.Text("Type in a ToDo: ")
 input_box = sg.InputText(tooltip="Enter ToDo", key="todo")
-add_button = sg.Button(size=2, image_source="files/add.png", mouseover_colors="LightBrown")
+add_button = sg.Button(size=2, image_source="files/add.png", mouseover_colors="LightBlue2",
+                       tooltip="Add ToDo", key="Add")
 list_box = sg.Listbox(values=functions.get_todos(), key='todos',
                       enable_events=True, size=[45, 10])
 edit_button = sg.Button("Edit")
-complete_button = sg.Button("Complete")
+complete_button = sg.Button(size=2, image_source="files/complete.png", mouseover_colors="LightBlue2",
+                       tooltip="Complete ToDo", key="Complete")
 exit_button = sg.Button("Exit")
 
 window = sg.Window("My ToDo App",
@@ -59,7 +61,7 @@ while True:
                 window['todos'].update(values=todos)
                 window['todo'].update(values="")
             except IndexError:
-                sg.Popup("Please select an item first.", font=("Helvetica", 20))\
+                sg.Popup("Please select an item first.", font=("Helvetica", 20))
 
         case "Exit":
             break
